@@ -3,10 +3,8 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 26
 
-
-
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 26
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -22,6 +20,10 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -31,4 +33,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.thoughtworks.xstream:xstream:1.4.9'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.guava:guava:24.1-android'
+    compile group: 'org.slf4j', name: 'slf4j-android', version: '1.7.7'
+    compile 'commons-beanutils:commons-beanutils:1.9.3'
+
 }
