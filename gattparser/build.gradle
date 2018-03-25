@@ -24,6 +24,15 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+
+//    sourceSets {
+//        main {
+//            java {
+//                exclude 'com/tomicdev/gattparser*'
+//            }
+//        }
+//    }
+
 }
 
 dependencies {
@@ -33,7 +42,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile 'com.thoughtworks.xstream:xstream:1.4.9'
+    //    https://stackoverflow.com/questions/34486111/cant-add-xstream-1-4-8-dependency-to-android-using-gradle (excluding xmlpull module should suffice)
+    compile ('com.thoughtworks.xstream:xstream:1.4.9') {
+        exclude group: 'xmlpull', module: 'xmlpull'
+    }
     compile 'com.google.code.gson:gson:2.8.2'
     compile 'com.google.guava:guava:24.1-android'
     compile group: 'org.slf4j', name: 'slf4j-android', version: '1.7.7'
