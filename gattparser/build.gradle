@@ -3,7 +3,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.tomicdev'
 
-
 android {
     compileSdkVersion 26
 
@@ -54,5 +53,31 @@ dependencies {
     compile 'com.google.guava:guava:24.1-android'
     compile group: 'org.slf4j', name: 'slf4j-android', version: '1.7.7'
     compile 'commons-beanutils:commons-beanutils:1.9.3'
+
+}
+
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 
 }
