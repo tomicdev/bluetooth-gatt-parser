@@ -13,6 +13,7 @@ class GattRegistryGenerator {
     }
 
     public static generate(String inputFolderName, String registryFileName) {
+        print registryFileName
 
         final File registryFile = new File(registryFileName)
         registryFile.parentFile.mkdirs()
