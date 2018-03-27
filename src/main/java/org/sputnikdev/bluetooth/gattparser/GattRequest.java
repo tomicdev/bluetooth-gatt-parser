@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser;
+package com.tomicdev.gattparser;
 
 /*-
  * #%L
@@ -28,7 +28,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.sputnikdev.bluetooth.gattparser.spec.Field;
+import com.tomicdev.gattparser.spec.Field;
 
 /**
  * Defines an object for capturing field values of a Bluetooth GATT characteristic. A GattRequest provides some methods

@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser;
+package com.tomicdev.gattparser;
 
 /*-
  * #%L
@@ -20,12 +20,12 @@ package org.sputnikdev.bluetooth.gattparser;
  * #L%
  */
 
-import org.sputnikdev.bluetooth.gattparser.num.FloatingPointNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.num.IEEE11073FloatingPointNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.num.IEEE754FloatingPointNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.num.RealNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.num.TwosComplementNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.spec.BluetoothGattSpecificationReader;
+import com.tomicdev.gattparser.num.FloatingPointNumberFormatter;
+import com.tomicdev.gattparser.num.IEEE11073FloatingPointNumberFormatter;
+import com.tomicdev.gattparser.num.IEEE754FloatingPointNumberFormatter;
+import com.tomicdev.gattparser.num.RealNumberFormatter;
+import com.tomicdev.gattparser.num.TwosComplementNumberFormatter;
+import com.tomicdev.gattparser.spec.BluetoothGattSpecificationReader;
 
 /**
  * A factory class for some main objects in the library:

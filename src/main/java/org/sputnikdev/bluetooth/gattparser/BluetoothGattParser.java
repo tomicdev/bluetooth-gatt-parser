@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser;
+package com.tomicdev.gattparser;
 
 /*-
  * #%L
@@ -22,10 +22,10 @@ package org.sputnikdev.bluetooth.gattparser;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.sputnikdev.bluetooth.gattparser.spec.BluetoothGattSpecificationReader;
-import org.sputnikdev.bluetooth.gattparser.spec.Characteristic;
-import org.sputnikdev.bluetooth.gattparser.spec.Field;
-import org.sputnikdev.bluetooth.gattparser.spec.Service;
+import com.tomicdev.gattparser.spec.BluetoothGattSpecificationReader;
+import com.tomicdev.gattparser.spec.Characteristic;
+import com.tomicdev.gattparser.spec.Field;
+import com.tomicdev.gattparser.spec.Service;
 
 import java.util.Arrays;
 import java.util.HashMap;

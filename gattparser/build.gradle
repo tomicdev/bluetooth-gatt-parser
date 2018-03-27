@@ -11,9 +11,6 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -43,8 +40,14 @@ dependencies {
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    testCompile 'org.mockito:mockito-core:2.8.9'
+    androidTestImplementation "org.mockito:mockito-android:2.8.9"
+
+    testCompile 'org.powermock:powermock-core:1.7.3'
+    testCompile 'org.powermock:powermock-module-junit4:1.7.3'
+    testCompile 'org.powermock:powermock-api-mockito2:1.7.0RC2'
+
+
     //    https://stackoverflow.com/questions/34486111/cant-add-xstream-1-4-8-dependency-to-android-using-gradle (excluding xmlpull module should suffice)
     compile ('com.thoughtworks.xstream:xstream:1.4.9') {
         exclude group: 'xmlpull', module: 'xmlpull'

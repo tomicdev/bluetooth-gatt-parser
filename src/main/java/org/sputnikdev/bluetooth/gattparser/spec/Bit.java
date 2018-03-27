@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser.spec;
+package com.tomicdev.gattparser.spec;
 
 /*-
  * #%L

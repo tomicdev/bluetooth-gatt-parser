@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser.spec;
+package com.tomicdev.gattparser.spec;
 
 /*-
  * #%L
@@ -20,7 +20,7 @@ package org.sputnikdev.bluetooth.gattparser.spec;
  * #L%
  */
 
-import org.sputnikdev.bluetooth.gattparser.BluetoothGattParserFactory;
+import com.tomicdev.gattparser.BluetoothGattParserFactory;
 
 import java.util.Arrays;
 import java.util.BitSet;

@@ -20,7 +20,15 @@ package com.tomicdev.gattparser;
  * #L%
  */
 
+import android.content.Context;
+import android.test.AndroidTestRunner;
+
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,13 +37,22 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+@RunWith(MockitoJUnitRunner.class)
 public class GenericCharacteristicParserIntegrationTest {
 
-    private BluetoothGattParser parser = BluetoothGattParserFactory.getDefault();
+
+    @Mock
+    Context mMockContext;
+
+    private BluetoothGattParser parser;
+
+    @Before
+    public void initParser() {
+        parser = BluetoothGattParserFactory.getDefault(mMockContext.getAssets());
+    }
 
     @Test
     public void testWahooHeartRateSensor() {
-
         GattResponse response = parser.parse("2A19", new byte[] {51});
         assertEquals(1, response.getSize());
         assertTrue(response.contains("Level"));

@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser;
+package com.tomicdev.gattparser;
 
 /*-
  * #%L
@@ -23,7 +23,7 @@ package org.sputnikdev.bluetooth.gattparser;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 
-import org.sputnikdev.bluetooth.gattparser.spec.Characteristic;
+import com.tomicdev.gattparser.spec.Characteristic;
 
 /**
  * A root interface for all GATT characteristic parsers in the framework. It defines simple read and write operations.

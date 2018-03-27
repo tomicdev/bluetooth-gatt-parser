@@ -20,12 +20,16 @@ package com.tomicdev.gattparser.spec;
  * #L%
  */
 
+import android.content.Context;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.runners.MockitoJUnitRunner;
 
@@ -38,8 +42,16 @@ import static org.junit.Assert.assertTrue;
 @RunWith(MockitoJUnitRunner.class)
 public class BluetoothGattSpecificationReaderTest {
 
-    @Spy
-    private BluetoothGattSpecificationReader reader = new BluetoothGattSpecificationReader();
+    private BluetoothGattSpecificationReader reader;
+
+    @Mock
+    Context mContext;
+
+    @Before
+    public void initReader() {
+        reader = new BluetoothGattSpecificationReader(mContext.getAssets());
+    }
+
 
     @Test
     public void testGetService() throws Exception {

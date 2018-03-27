@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser;
+package com.tomicdev.gattparser;
 
 /*-
  * #%L
@@ -30,8 +30,8 @@ import org.apache.commons.beanutils.converters.FloatConverter;
 import org.apache.commons.beanutils.converters.IntegerConverter;
 import org.apache.commons.beanutils.converters.LongConverter;
 import org.apache.commons.beanutils.converters.StringConverter;
-import org.sputnikdev.bluetooth.gattparser.spec.Field;
-import org.sputnikdev.bluetooth.gattparser.spec.FlagUtils;
+import com.tomicdev.gattparser.spec.Field;
+import com.tomicdev.gattparser.spec.FlagUtils;
 
 /**
  * Bluetooth GATT field holder. Field holder encapsulates notion about field type and field value as well as some

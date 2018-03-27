@@ -1,4 +1,4 @@
-package org.sputnikdev.bluetooth.gattparser;
+package com.tomicdev.gattparser;
 
 /*-
  * #%L
@@ -22,14 +22,14 @@ package org.sputnikdev.bluetooth.gattparser;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.sputnikdev.bluetooth.gattparser.num.FloatingPointNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.num.RealNumberFormatter;
-import org.sputnikdev.bluetooth.gattparser.spec.BluetoothGattSpecificationReader;
-import org.sputnikdev.bluetooth.gattparser.spec.Characteristic;
-import org.sputnikdev.bluetooth.gattparser.spec.Field;
-import org.sputnikdev.bluetooth.gattparser.spec.FieldFormat;
-import org.sputnikdev.bluetooth.gattparser.spec.FieldType;
-import org.sputnikdev.bluetooth.gattparser.spec.FlagUtils;
+import com.tomicdev.gattparser.num.FloatingPointNumberFormatter;
+import com.tomicdev.gattparser.num.RealNumberFormatter;
+import com.tomicdev.gattparser.spec.BluetoothGattSpecificationReader;
+import com.tomicdev.gattparser.spec.Characteristic;
+import com.tomicdev.gattparser.spec.Field;
+import com.tomicdev.gattparser.spec.FieldFormat;
+import com.tomicdev.gattparser.spec.FieldType;
+import com.tomicdev.gattparser.spec.FlagUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
