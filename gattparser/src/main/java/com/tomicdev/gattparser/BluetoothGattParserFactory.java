@@ -20,6 +20,8 @@ package com.tomicdev.gattparser;
  * #L%
  */
 
+import android.content.res.AssetManager;
+
 import com.tomicdev.gattparser.num.FloatingPointNumberFormatter;
 import com.tomicdev.gattparser.num.IEEE11073FloatingPointNumberFormatter;
 import com.tomicdev.gattparser.num.IEEE754FloatingPointNumberFormatter;
@@ -52,11 +54,11 @@ public final class BluetoothGattParserFactory {
      *
      * @return GATT specification reader
      */
-    public static BluetoothGattSpecificationReader getSpecificationReader() {
+    public static BluetoothGattSpecificationReader getSpecificationReader(AssetManager assetManager) {
         if (reader == null) {
             synchronized (BluetoothGattParserFactory.class) {
                 if (reader == null) {
-                    reader = new BluetoothGattSpecificationReader();
+                    reader = new BluetoothGattSpecificationReader(assetManager);
                 }
             }
         }
@@ -67,11 +69,11 @@ public final class BluetoothGattParserFactory {
      * Returns Bluetooth GATT parser.
      * @return Bluetooth GATT parser
      */
-    public static BluetoothGattParser getDefault() {
+    public static BluetoothGattParser getDefault(AssetManager assetManager) {
         if (defaultParser == null) {
             synchronized (BluetoothGattParserFactory.class) {
                 if (defaultParser == null) {
-                    BluetoothGattSpecificationReader reader = getSpecificationReader();
+                    BluetoothGattSpecificationReader reader = getSpecificationReader(assetManager);
                     defaultParser = new BluetoothGattParser(reader, new GenericCharacteristicParser(reader));
                 }
             }
